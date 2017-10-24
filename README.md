@@ -9,12 +9,11 @@ The animation background may be set to a given color or be made transparent.
 <?php
   include "/GIFDecoder.class.php";
 
-	$animation = 'gears.gif';
+  $animation = 'gears.gif';
 
   $gifDecoder = new GIFDecoder ( fread ( fopen ( $animation, "rb" ), filesize ( $animation ) ) );
-
-	foreach ( $gifDecoder -> GIFGetFrames ( ) as $frame ) {
-	  ...
+    foreach ( $gifDecoder -> GIFGetFrames ( ) as $frame ) {
+    ...
   }
 ?>
 ```
