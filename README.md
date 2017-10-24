@@ -12,8 +12,9 @@ The animation background may be set to a given color or be made transparent.
   $animation = 'gears.gif';
 
   $gifDecoder = new GIFDecoder ( fread ( fopen ( $animation, "rb" ), filesize ( $animation ) ) );
-    foreach ( $gifDecoder -> GIFGetFrames ( ) as $frame ) {
-    ...
+  
+  foreach ( $gifDecoder -> GIFGetFrames ( ) as $frame ) {
+    echo "Frame size: " . strlen ( $frame ) . "<br/>";
   }
 ?>
 ```
